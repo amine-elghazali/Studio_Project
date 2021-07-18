@@ -16,8 +16,10 @@ class CreateAlbumsTable extends Migration
         Schema::create('albums', function (Blueprint $table) {
             $table->increments('idAlbum');
             $table->unsignedInteger('id_Artist');
-            $table->String('name');
+            $table->string('albumName');
             $table->String('Bio');
+            $table->date('albumDate');
+
             $table->timestamps();
 
         // Foreign Key  ( Artist ) :
